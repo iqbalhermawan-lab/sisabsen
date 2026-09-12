@@ -1,0 +1,105 @@
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe.config
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.pdb
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Guna.UI2.dll
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.dll
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Google.Protobuf.dll
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.xml
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.AssemblyReference.cache
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FDashboard.resources
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FLogin.resources
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FUser.resources
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.Properties.Resources.resources
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.GenerateResource.cache
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CoreCompileInputs.cache
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CopyComplete
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.exe
+D:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.pdb
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe.config
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.pdb
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Guna.UI2.dll
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.dll
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Google.Protobuf.dll
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.xml
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.AssemblyReference.cache
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FDashboard.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FLogin.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FUser.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.Properties.Resources.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.GenerateResource.cache
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CoreCompileInputs.cache
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CopyComplete
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.exe
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.pdb
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FRole.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FSiswa.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FKelas.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FGuru.resources
+E:\TUGAS ADITYA 12 RPL A SEMESTER 1\iqbal\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FAbsenH.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe.config
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.pdb
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Guna.UI2.dll
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.dll
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Google.Protobuf.dll
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.xml
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.AssemblyReference.cache
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FAbsenH.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FDashboard.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FGuru.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FKelas.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FLogin.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FRole.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FSiswa.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FUser.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.Properties.Resources.resources
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.GenerateResource.cache
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CoreCompileInputs.cache
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CopyComplete
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.exe
+D:\XII\C#\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.pdb
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe.config
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.pdb
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Guna.UI2.dll
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.dll
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Google.Protobuf.dll
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.xml
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.AssemblyReference.cache
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FAbsenH.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FDashboard.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FGuru.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FKelas.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FLogin.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FRole.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FSiswa.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FUser.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.Properties.Resources.resources
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.GenerateResource.cache
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CoreCompileInputs.cache
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CopyComplete
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.exe
+F:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.pdb
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe.config
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.exe
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\sisabsen-iqbal.pdb
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Guna.UI2.dll
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.dll
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\Google.Protobuf.dll
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\bin\Debug\MySql.Data.xml
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.AssemblyReference.cache
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FAbsenH.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FDashboard.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FGuru.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FKelas.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FLogin.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FRole.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FSiswa.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.FUser.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen_iqbal.Properties.Resources.resources
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.GenerateResource.cache
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CoreCompileInputs.cache
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.csproj.CopyComplete
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.exe
+D:\XII\dekstop\sisabsen-iqbal\sisabsen-iqbal\obj\Debug\sisabsen-iqbal.pdb
