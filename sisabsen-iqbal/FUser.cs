@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace sisabsen_iqbal
 {
@@ -21,15 +22,22 @@ namespace sisabsen_iqbal
         {
             guna2DataGridView1.Rows.Clear();
             int no = 1;
-            db.crud("SELECT * FROM users INNER JOIN roles ON users.id_role = roles.id_role");
+
+            string query = $"SELECT users.*, roles.role FROM users INNER JOIN roles ON users.id_role = roles.id_role";
+            db.crud(query);
+
             foreach (DataRow Row in db.ds.Tables[0].Rows)
             {
                 string id = "" + Row["id_user"];
                 string Nama = "" + Row["nama"];
                 string user = "" + Row["username"];
-                string pass = "" + Row["password"];
                 string role = "" + Row["role"];
-                guna2DataGridView1.Rows.Add(no, id, user, pass, role, Nama);
+
+                // Jangan tampilkan hash password
+                string pass = "********";
+
+                guna2DataGridView1.Rows.Add(no, id, user, pass, role, Nama
+                );
                 no++;
             }
         }
@@ -46,18 +54,30 @@ namespace sisabsen_iqbal
         {
             if (txtNama.Text == "" || txtUser.Text == "" || txtPass.Text == "" || cmbRole.SelectedIndex == -1)
             {
-                DialogResult DataKosong = MessageBox.Show("Masukan Data yang Lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Masukan Data yang Lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
-            else
-            {
-                string Nama = txtNama.Text;
-                string user = txtUser.Text;
-                string pass = txtPass.Text;
-                string role = cmbRole.Text;
-                db.crud($"INSERT INTO users VALUES (null, '{user}', '{pass}', (SELECT id_role FROM roles WHERE role = '{role}'), '{Nama}');");
-                bersih();
-                tampildata();
-            }
+
+            string Nama = txtNama.Text.Trim();
+            string user = txtUser.Text.Trim();
+            string pass = txtPass.Text;
+            string role = cmbRole.Text.Trim();
+
+            // HASH PASSWORD
+            string passwordHash = BCrypt.Net.BCrypt.HashPassword(pass);
+
+            string query = $"INSERT INTO users(username, password, id_role, nama) VALUES (@username, @password, (SELECT id_role FROM roles WHERE role = @role), @nama)";
+
+            db.crud(
+                query,
+                new MySqlParameter("@username", user),
+                new MySqlParameter("@password", passwordHash),
+                new MySqlParameter("@role", role),
+                new MySqlParameter("@nama", Nama)
+            );
+            MessageBox.Show("Data user berhasil ditambahkan!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            bersih();
+            tampildata();
         }
 
         private void FUser_Load(object sender, EventArgs e)
@@ -73,25 +93,33 @@ namespace sisabsen_iqbal
             int Baris = e.RowIndex;
             int Kolom = e.ColumnIndex;
 
-            if (Baris >= 0)
-            {
-                if (Kolom == 6)
-                {
-                    string id = guna2DataGridView1.Rows[Baris].Cells[1].Value.ToString();
-                    db.crud($"SELECT u.*, r.role FROM users u JOIN roles r ON u.id_role = r.id_role WHERE u.id_user = '{id}'"); foreach (DataRow row in db.ds.Tables[0].Rows)
-                    {
-                        string idU = "" + row["id_user"];
-                        string user = "" + row["username"];
-                        string pass = "" + row["password"];
-                        string role = "" + row["role"];
-                        string nama = "" + row["nama"];
+            if (Baris < 0)
+                return;
 
-                        guna2HtmlLabel6.Text = idU;
-                        txtNama.Text = nama;
-                        txtUser.Text = user;
-                        txtPass.Text = pass;
-                        cmbRole.Text = role;
-                    }
+            if (Kolom == 6)
+            {
+                string id = guna2DataGridView1.Rows[Baris].Cells[1].Value.ToString();
+                string query = $"SELECT u.*, r.role FROM users u JOIN roles r ON u.id_role = r.id_role WHERE u.id_user = @id";
+                db.crud(query,
+                    new MySqlParameter("@id", id)
+                );
+
+                foreach (DataRow row in db.ds.Tables[0].Rows)
+                {
+                    string idU = "" + row["id_user"];
+                    string user = "" + row["username"];
+                    string role = "" + row["role"];
+                    string nama = "" + row["nama"];
+
+                    guna2HtmlLabel6.Text = idU;
+
+                    txtNama.Text = nama;
+                    txtUser.Text = user;
+
+                    // Password dikosongkan
+                    txtPass.Clear();
+
+                    cmbRole.Text = role;
                 }
             }
 
@@ -102,7 +130,11 @@ namespace sisabsen_iqbal
 
                 if (Hapus == DialogResult.OK)
                 {
-                    db.crud($"DELETE FROM users WHERE id_user = '{idba}' ");
+                    string query = "DELETE FROM users WHERE id_user = @id";
+
+                    db.crud(query,
+                        new MySqlParameter("@id", idba)
+                    );
                     tampildata();
                 }
             }
@@ -110,16 +142,52 @@ namespace sisabsen_iqbal
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            string id = guna2HtmlLabel6.Text;
-            string Nama = txtNama.Text;
-            string user = txtUser.Text;
+            string id = guna2HtmlLabel6.Text.Trim();
+            string Nama = txtNama.Text.Trim();
+            string user = txtUser.Text.Trim();
             string pass = txtPass.Text;
             string role = cmbRole.Text.Trim();
 
-            //MessageBox.Show("ID: " + id + " | Role: " + role + " | Nama: " + Nama);
+            if (id == "" || Nama == "" || user == "" || role == "")
+            {
+                MessageBox.Show("Data belum lengkap!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string query;
 
-            db.crud($"UPDATE users SET username = '{user}', password = '{pass}', id_role = (SELECT id_role FROM roles WHERE role = '{role}'), nama = '{Nama}' WHERE id_user = '{id}'");
+            if (pass == "")
+            {
+                // PASSWORD TIDAK DIUBAH
+
+                query = $"UPDATE users SET username = @username, id_role = (SELECT id_role FROM roles WHERE role = @role), nama = @nama WHERE id_user = @id";
+                db.crud(
+                    query,
+                    new MySqlParameter("@username", user),
+                    new MySqlParameter("@role", role),
+                    new MySqlParameter("@nama", Nama),
+                    new MySqlParameter("@id", id)
+                );
+            }
+            else
+            {
+                // PASSWORD BARU → HASH
+
+                string passwordHash = BCrypt.Net.BCrypt.HashPassword(pass);
+
+                query = $"UPDATE users SET username = @username, password = @password, id_role = (SELECT id_role FROM roles WHERE role = @role), nama = @nama WHERE id_user = @id";
+                db.crud(
+                    query,
+                    new MySqlParameter("@username", user),
+                    new MySqlParameter("@password", passwordHash),
+                    new MySqlParameter("@role", role),
+                    new MySqlParameter("@nama", Nama),
+                    new MySqlParameter("@id", id)
+                );
+            }
+
+            MessageBox.Show("Data user berhasil diubah!", "Informasi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             bersih();
+            guna2HtmlLabel6.Text = "";
             tampildata();
         }
 

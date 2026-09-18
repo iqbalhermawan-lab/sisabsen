@@ -47,6 +47,7 @@ namespace sisabsen_iqbal
             tampildata();
             guna2DataGridView1.Columns["Column1"].Visible = false;
             guna2HtmlLabel6.Visible = false;
+            loadkelas();
         }
 
         private void cmbJK_DropDown(object sender, EventArgs e)
@@ -151,6 +152,45 @@ namespace sisabsen_iqbal
                 guna2DataGridView1.Rows.Add(no, id, nis, nama, jk, kls);
                 no++;
             }
+        }
+
+        public void loadsiswa(string idKelas)
+        {
+            guna2DataGridView1.Rows.Clear();
+            int no = 1;
+
+            db.crud($"SELECT id_siswa, nis, nama FROM siswa WHERE id_kelas = '{idKelas}'");
+
+            foreach (DataRow row in db.ds.Tables[0].Rows)
+            {
+                string id = "" + row["id_siswa"];
+                string nis = "" + row["nis"];
+                string nama = "" + row["nama"];
+
+                guna2DataGridView1.Rows.Add(no, id, nis, nama, "Hadir");
+                no++;
+            }
+        }
+
+        private void cmbKelas_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbKelas.SelectedIndex != -1 && cmbKelas.SelectedValue.ToString() != "System.Data.DataRowView")
+            {
+                loadsiswa(cmbKelas.SelectedValue.ToString());
+            }
+        }
+
+        public void loadkelas()
+        {
+            db.crud("SELECT id_kelas, nama_kelas FROM kelas");
+
+            // kode agar datanya tidak hilang saat db.crud dipanggil lagi nanti
+            DataTable dtKelas = db.ds.Tables[0].Copy();
+
+            cmbKelas.DataSource = dtKelas;
+            cmbKelas.DisplayMember = "nama_kelas";
+            cmbKelas.ValueMember = "id_kelas";
+            cmbKelas.SelectedIndex = -1;
         }
     }
 }

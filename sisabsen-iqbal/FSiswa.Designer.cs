@@ -58,6 +58,8 @@ namespace sisabsen_iqbal
             this.Column8 = new System.Windows.Forms.DataGridViewImageColumn();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.cmbJK = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.cmbKelas = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.guna2DataGridView1)).BeginInit();
             this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
@@ -160,7 +162,7 @@ namespace sisabsen_iqbal
             this.guna2HtmlLabel6.BackColor = System.Drawing.Color.White;
             this.guna2HtmlLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel6.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel6.Location = new System.Drawing.Point(336, 312);
+            this.guna2HtmlLabel6.Location = new System.Drawing.Point(291, 315);
             this.guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             this.guna2HtmlLabel6.Size = new System.Drawing.Size(22, 22);
             this.guna2HtmlLabel6.TabIndex = 27;
@@ -382,6 +384,8 @@ namespace sisabsen_iqbal
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.cmbKelas);
+            this.guna2Panel1.Controls.Add(this.guna2HtmlLabel7);
             this.guna2Panel1.Controls.Add(this.cmbJK);
             this.guna2Panel1.Controls.Add(this.guna2HtmlLabel6);
             this.guna2Panel1.Controls.Add(this.cmbKls);
@@ -420,6 +424,36 @@ namespace sisabsen_iqbal
             this.cmbJK.Size = new System.Drawing.Size(201, 36);
             this.cmbJK.TabIndex = 28;
             this.cmbJK.DropDown += new System.EventHandler(this.cmbJK_DropDown);
+            // 
+            // guna2HtmlLabel7
+            // 
+            this.guna2HtmlLabel7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.guna2HtmlLabel7.BackColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel7.ForeColor = System.Drawing.Color.Black;
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(346, 319);
+            this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            this.guna2HtmlLabel7.Size = new System.Drawing.Size(121, 18);
+            this.guna2HtmlLabel7.TabIndex = 31;
+            this.guna2HtmlLabel7.Text = "Berdasarkan Kelas:";
+            // 
+            // cmbKelas
+            // 
+            this.cmbKelas.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.cmbKelas.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKelas.BorderRadius = 5;
+            this.cmbKelas.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.cmbKelas.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbKelas.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKelas.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.cmbKelas.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.cmbKelas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.cmbKelas.ItemHeight = 30;
+            this.cmbKelas.Location = new System.Drawing.Point(473, 307);
+            this.cmbKelas.Name = "cmbKelas";
+            this.cmbKelas.Size = new System.Drawing.Size(201, 36);
+            this.cmbKelas.TabIndex = 32;
+            this.cmbKelas.SelectedIndexChanged += new System.EventHandler(this.cmbKelas_SelectedIndexChanged);
             // 
             // FSiswa
             // 
@@ -464,5 +498,7 @@ namespace sisabsen_iqbal
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewImageColumn Column7;
         private System.Windows.Forms.DataGridViewImageColumn Column8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbKelas;
     }
 }

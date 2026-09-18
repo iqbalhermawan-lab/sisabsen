@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 10, 2026 at 04:20 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: Sep 18, 2026 at 09:31 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -229,12 +229,12 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `username`, `password`, `id_role`, `nama`) VALUES
-(1, 'adminA', 'admin123', 1, 'Iqbal'),
-(2, 'user1', '111', 2, 'ibam1'),
-(3, 'user2', '222', 2, 'ibam2'),
-(5, 'user3', '333', 2, 'ibam3'),
-(6, 'user4', '444', 2, 'ibam4'),
-(7, 'user5', '555', 2, 'ibam5'),
+(1, 'admin1', '$2a$11$F4ktwyPGUMQ4iHPNu/9S.u9zZO2s2jEHstmNlIQbCBWtRgbVe7jDa', 1, 'Iqbal'),
+(2, 'user1', '$2a$11$aKG/xHuI/tSMdT5KdCWofeWwCqfGC8pGfheUWsi4zWLBsIagn1Ute', 2, 'ibam1'),
+(3, 'user2', '$2a$11$l/FAhySao20APD15DyJwjeizjuEc1XuGCD6MpsqzdXfjAvzR7kQ/y', 2, 'ibam2'),
+(5, 'user3', '$2a$11$Td8CXDflxP5wAbODbnmDX.azbMiTiPA7/gKE9jNeKV/8mYai41JgG', 2, 'ibam3'),
+(6, 'user4', '$2a$11$0JLkOgdxRx/hGKA7/uJZoe5RWkjCdkDDdGflOzby7of1gNfOb8o8q', 2, 'ibam4'),
+(7, 'user5', '$2a$11$QE81MlsSsAysvsXnAoAqseCRz8cW8d9pOWBtXB3c/cynQeSEkaiIu', 2, 'ibam5'),
 (8, 'user6', '666', 2, 'ibam6'),
 (9, 'user7', '777', 2, 'ibam7'),
 (10, 'user8', '888', 2, 'ibam8'),
@@ -242,7 +242,7 @@ INSERT INTO `users` (`id_user`, `username`, `password`, `id_role`, `nama`) VALUE
 (12, 'user10', '1010', 2, 'ibam10'),
 (13, 'user11', '1111', 2, 'ibam11'),
 (14, 'user12', '1212', 2, 'ibam12'),
-(15, 'guru1', 'guru111', 3, 'ibam13');
+(15, 'guru1', '$2a$11$vPam.YSB4qplLTOfA.ZHNu8NFrJUZCD/mK8T/Iy.DNTA5OufZcwNW', 3, 'ibam13');
 
 --
 -- Indexes for dumped tables

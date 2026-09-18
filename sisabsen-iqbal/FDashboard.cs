@@ -17,9 +17,26 @@ namespace sisabsen_iqbal
             InitializeComponent();
         }
 
-        private void guna2Panel2_Paint(object sender, PaintEventArgs e)
+        private void AturHakAkses()
         {
-            //Application.Exit();
+            //btnDataM.Visible = false;
+            //btnAbsenH.Visible = false;
+
+            switch (UserSession.IdRole)
+            {
+                case 1: //admin
+                    btnDataM.Visible = true;
+                    btnAbsenH.Visible = true;
+                    break;
+
+                case 2: // Walikelas
+                    btnAbsenH.Visible = true;
+                    break;
+
+                case 3: // Guru
+                    btnAbsenH.Visible = true;
+                    break;
+            }
         }
 
         private void guna2Button2_Click(object sender, EventArgs e)
@@ -99,6 +116,36 @@ namespace sisabsen_iqbal
                 TopMost = true
             };
             KF.untukForm(absenH, pnlContent);
+        }
+
+        private void FDashboard_Load(object sender, EventArgs e)
+        {
+            AturHakAkses();
+            //Application.Exit();
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            DialogResult konfirmasi = MessageBox.Show("Apakah Anda yakin ingin keluar?", "Konfirmasi Logout", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (konfirmasi == DialogResult.Yes)
+            {
+                UserSession.Logout();
+
+                FLogin formLogin = new FLogin();
+                formLogin.Show();
+                this.Close();
+            }
+        }
+
+        private void FAbsenK_Click(object sender, EventArgs e)
+        {
+            FAbsenK absenK = new FAbsenK()
+            {
+                TopLevel = false,
+                TopMost = true
+            };
+            KF.untukForm(absenK, pnlContent);
         }
     }
 }

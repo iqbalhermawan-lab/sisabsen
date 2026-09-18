@@ -71,13 +71,21 @@ namespace sisabsen_iqbal
 
             string tgl = dtpTanggal.Value.ToString("yyyy-MM-dd");
             string idKelas = cmbKelas.SelectedValue.ToString();
+            string idGuru = UserSession.IdGuru.ToString();
 
-            // TODO: Ganti ini dengan Session ID Guru yang login nantinya
-            string idGuru = "1";
+            // cek agar absen tidak double input
+            string queryCek = $"SELECT COUNT(*) FROM absensi WHERE tanggal = '{tgl}' AND id_kelas = '{idKelas}'";
+            db.crud(queryCek);
+
+            int jumlahAbsen = Convert.ToInt32(db.ds.Tables[0].Rows[0][0]);
+            if (jumlahAbsen > 0)
+            {
+                MessageBox.Show("Kelas ini sudah di-absen pada tanggal tersebut!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
 
             foreach (DataGridViewRow row in guna2DataGridView1.Rows)
             {
-                // Mencegah baris kosong (new row) ikut tersimpan
                 if (row.Cells[1].Value != null)
                 {
                     string idSiswa = row.Cells[1].Value.ToString();
