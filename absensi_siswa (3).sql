@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2026 at 09:31 AM
+-- Generation Time: Sep 18, 2026 at 10:56 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -45,7 +45,39 @@ INSERT INTO `absensi` (`id_absensi`, `tanggal`, `id_kelas`, `id_siswa`, `keteran
 (2, '2026-09-10', 1, 2, 'Hadir', 1),
 (3, '2026-09-10', 1, 3, 'Hadir', 1),
 (4, '2026-09-10', 1, 4, 'Sakit', 1),
-(5, '2026-09-10', 1, 5, 'Hadir', 1);
+(5, '2026-09-10', 1, 5, 'Hadir', 1),
+(6, '2026-09-18', 3, 32, 'Izin', 1),
+(7, '2026-09-18', 3, 33, 'Hadir', 1),
+(8, '2026-09-18', 3, 34, 'Alpa', 1),
+(9, '2026-09-18', 3, 35, 'Hadir', 1),
+(10, '2026-09-18', 3, 36, 'Hadir', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `absensi_kegiatan`
+--
+
+CREATE TABLE `absensi_kegiatan` (
+  `id_absen_kegiatan` int(11) NOT NULL,
+  `tanggal` date NOT NULL,
+  `nama_kegiatan` varchar(100) NOT NULL,
+  `id_kelas` int(11) NOT NULL,
+  `id_siswa` int(11) NOT NULL,
+  `keterangan` enum('Hadir','Izin','Sakit','Alpa') NOT NULL DEFAULT 'Hadir',
+  `id_guru` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `absensi_kegiatan`
+--
+
+INSERT INTO `absensi_kegiatan` (`id_absen_kegiatan`, `tanggal`, `nama_kegiatan`, `id_kelas`, `id_siswa`, `keterangan`, `id_guru`) VALUES
+(1, '2026-09-10', 'Lomba 17an', 2, 6, 'Hadir', 2),
+(2, '2026-09-10', 'Lomba 17an', 2, 7, 'Izin', 2),
+(3, '2026-09-10', 'Lomba 17an', 2, 8, 'Hadir', 2),
+(4, '2026-09-10', 'Lomba 17an', 2, 9, 'Hadir', 2),
+(5, '2026-09-10', 'Lomba 17an', 2, 10, 'Sakit', 2);
 
 -- --------------------------------------------------------
 
@@ -258,6 +290,15 @@ ALTER TABLE `absensi`
   ADD KEY `id_guru` (`id_guru`);
 
 --
+-- Indexes for table `absensi_kegiatan`
+--
+ALTER TABLE `absensi_kegiatan`
+  ADD PRIMARY KEY (`id_absen_kegiatan`),
+  ADD KEY `id_kelas` (`id_kelas`),
+  ADD KEY `id_siswa` (`id_siswa`),
+  ADD KEY `id_guru` (`id_guru`);
+
+--
 -- Indexes for table `guru`
 --
 ALTER TABLE `guru`
@@ -300,7 +341,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `absensi_kegiatan`
+--
+ALTER TABLE `absensi_kegiatan`
+  MODIFY `id_absen_kegiatan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `guru`
@@ -343,6 +390,14 @@ ALTER TABLE `absensi`
   ADD CONSTRAINT `fk_absensi_guru` FOREIGN KEY (`id_guru`) REFERENCES `guru` (`id_guru`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_absensi_kelas` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_absensi_siswa` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id_siswa`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `absensi_kegiatan`
+--
+ALTER TABLE `absensi_kegiatan`
+  ADD CONSTRAINT `absensi_kegiatan_ibfk_1` FOREIGN KEY (`id_kelas`) REFERENCES `kelas` (`id_kelas`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `absensi_kegiatan_ibfk_2` FOREIGN KEY (`id_siswa`) REFERENCES `siswa` (`id_siswa`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `absensi_kegiatan_ibfk_3` FOREIGN KEY (`id_guru`) REFERENCES `guru` (`id_guru`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `guru`
