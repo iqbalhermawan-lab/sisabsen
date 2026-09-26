@@ -192,6 +192,7 @@ namespace sisabsen_iqbal
             // guna2Button1
             // 
             this.guna2Button1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.guna2Button1.BackColor = System.Drawing.Color.White;
             this.guna2Button1.BorderRadius = 5;
             this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;

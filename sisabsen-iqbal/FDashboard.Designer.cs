@@ -31,6 +31,7 @@ namespace sisabsen_iqbal
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDashboard));
             this.pnlSide = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2Shapes1 = new Guna.UI2.WinForms.Guna2Shapes();
@@ -56,7 +57,6 @@ namespace sisabsen_iqbal
             this.guna2Shapes8 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2Shapes7 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
-            this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -78,6 +78,17 @@ namespace sisabsen_iqbal
             this.pnlSide.Name = "pnlSide";
             this.pnlSide.Size = new System.Drawing.Size(170, 749);
             this.pnlSide.TabIndex = 0;
+            // 
+            // guna2HtmlLabel4
+            // 
+            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
+            this.guna2HtmlLabel4.Location = new System.Drawing.Point(56, 33);
+            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
+            this.guna2HtmlLabel4.Size = new System.Drawing.Size(79, 17);
+            this.guna2HtmlLabel4.TabIndex = 12;
+            this.guna2HtmlLabel4.Text = "SMA Negeri 1";
             // 
             // guna2Button1
             // 
@@ -516,17 +527,6 @@ namespace sisabsen_iqbal
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.Zoom = 100;
             // 
-            // guna2HtmlLabel4
-            // 
-            this.guna2HtmlLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.guna2HtmlLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel4.ForeColor = System.Drawing.Color.White;
-            this.guna2HtmlLabel4.Location = new System.Drawing.Point(56, 33);
-            this.guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            this.guna2HtmlLabel4.Size = new System.Drawing.Size(79, 17);
-            this.guna2HtmlLabel4.TabIndex = 12;
-            this.guna2HtmlLabel4.Text = "SMA Negeri 1";
-            // 
             // FDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -537,6 +537,7 @@ namespace sisabsen_iqbal
             this.Name = "FDashboard";
             this.Text = "FDashboard";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FDashboard_FormClosing);
             this.Load += new System.EventHandler(this.FDashboard_Load);
             this.pnlSide.ResumeLayout(false);
             this.pnlSide.PerformLayout();

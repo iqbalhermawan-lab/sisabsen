@@ -29,7 +29,15 @@ namespace sisabsen_iqbal
                 cmbKelas.DataSource = dtKelas;
                 cmbKelas.DisplayMember = "nama_kelas";
                 cmbKelas.ValueMember = "id_kelas";
-                cmbKelas.SelectedIndex = -1;
+
+                // data kelas sesuai walikelas
+                cmbKelas.SelectedIndex = 0;
+                cmbKelas.Enabled = false;
+
+                if (cmbKelas.SelectedValue != null)
+                {
+                    loadsiswa(cmbKelas.SelectedValue.ToString());
+                }
             }
             else
             {
@@ -40,6 +48,9 @@ namespace sisabsen_iqbal
 
         private void FAbsenK_Load(object sender, EventArgs e)
         {
+            dtpTanggal.Value = DateTime.Now;
+            dtpTanggal.Enabled = false;
+
             LoadKelasWali();
         }
 
@@ -113,9 +124,31 @@ namespace sisabsen_iqbal
             }
             MessageBox.Show("Data absensi kegiatan berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            guna2DataGridView1.Rows.Clear();
-            cmbKelas.SelectedIndex = -1;
             txtKe.Clear();
+            loadsiswa(cmbKelas.SelectedValue.ToString());
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            guna2DataGridView1.CurrentCell = null;
+            string kataKunci = txtSearch.Text.ToLower();
+
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string nisSiswa = row.Cells[2].Value != null ? row.Cells[2].Value.ToString().ToLower() : "";
+                string namaSiswa = row.Cells[3].Value != null ? row.Cells[3].Value.ToString().ToLower() : "";
+
+                if (namaSiswa.Contains(kataKunci) || nisSiswa.Contains(kataKunci))
+                {
+                    row.Visible = true;
+                }
+                else
+                {
+                    row.Visible = false;
+                }
+            }
         }
     }
 }

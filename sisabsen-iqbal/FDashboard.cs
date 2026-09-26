@@ -19,8 +19,8 @@ namespace sisabsen_iqbal
 
         private void AturHakAkses()
         {
-            //btnDataM.Visible = false;
-            //btnAbsenH.Visible = false;
+            btnDataM.Visible = false;
+            btnAbsenH.Visible = false;
 
             switch (UserSession.IdRole)
             {
@@ -121,7 +121,6 @@ namespace sisabsen_iqbal
         private void FDashboard_Load(object sender, EventArgs e)
         {
             AturHakAkses();
-            //Application.Exit();
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
@@ -146,6 +145,11 @@ namespace sisabsen_iqbal
                 TopMost = true
             };
             KF.untukForm(absenK, pnlContent);
+        }
+
+        private void FDashboard_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

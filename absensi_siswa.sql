@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 18, 2026 at 10:56 AM
+-- Generation Time: Sep 25, 2026 at 10:51 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -31,6 +31,7 @@ CREATE TABLE `absensi` (
   `id_absensi` int(11) NOT NULL,
   `tanggal` date NOT NULL,
   `id_kelas` int(11) NOT NULL,
+  `jam_pelajaran` varchar(50) NOT NULL,
   `id_siswa` int(11) NOT NULL,
   `keterangan` enum('Hadir','Izin','Sakit','Alpa') NOT NULL DEFAULT 'Hadir',
   `id_guru` int(11) NOT NULL
@@ -40,17 +41,12 @@ CREATE TABLE `absensi` (
 -- Dumping data for table `absensi`
 --
 
-INSERT INTO `absensi` (`id_absensi`, `tanggal`, `id_kelas`, `id_siswa`, `keterangan`, `id_guru`) VALUES
-(1, '2026-09-10', 1, 1, 'Izin', 1),
-(2, '2026-09-10', 1, 2, 'Hadir', 1),
-(3, '2026-09-10', 1, 3, 'Hadir', 1),
-(4, '2026-09-10', 1, 4, 'Sakit', 1),
-(5, '2026-09-10', 1, 5, 'Hadir', 1),
-(6, '2026-09-18', 3, 32, 'Izin', 1),
-(7, '2026-09-18', 3, 33, 'Hadir', 1),
-(8, '2026-09-18', 3, 34, 'Alpa', 1),
-(9, '2026-09-18', 3, 35, 'Hadir', 1),
-(10, '2026-09-18', 3, 36, 'Hadir', 1);
+INSERT INTO `absensi` (`id_absensi`, `tanggal`, `id_kelas`, `jam_pelajaran`, `id_siswa`, `keterangan`, `id_guru`) VALUES
+(21, '2026-09-25', 2, 'Jam Ke-01', 6, 'Sakit', 13),
+(22, '2026-09-25', 2, 'Jam Ke-01', 7, 'Hadir', 13),
+(23, '2026-09-25', 2, 'Jam Ke-01', 8, 'Hadir', 13),
+(24, '2026-09-25', 2, 'Jam Ke-01', 9, 'Izin', 13),
+(25, '2026-09-25', 2, 'Jam Ke-01', 10, 'Hadir', 13);
 
 -- --------------------------------------------------------
 
@@ -267,13 +263,13 @@ INSERT INTO `users` (`id_user`, `username`, `password`, `id_role`, `nama`) VALUE
 (5, 'user3', '$2a$11$Td8CXDflxP5wAbODbnmDX.azbMiTiPA7/gKE9jNeKV/8mYai41JgG', 2, 'ibam3'),
 (6, 'user4', '$2a$11$0JLkOgdxRx/hGKA7/uJZoe5RWkjCdkDDdGflOzby7of1gNfOb8o8q', 2, 'ibam4'),
 (7, 'user5', '$2a$11$QE81MlsSsAysvsXnAoAqseCRz8cW8d9pOWBtXB3c/cynQeSEkaiIu', 2, 'ibam5'),
-(8, 'user6', '666', 2, 'ibam6'),
-(9, 'user7', '777', 2, 'ibam7'),
-(10, 'user8', '888', 2, 'ibam8'),
-(11, 'user9', '999', 2, 'ibam9'),
-(12, 'user10', '1010', 2, 'ibam10'),
-(13, 'user11', '1111', 2, 'ibam11'),
-(14, 'user12', '1212', 2, 'ibam12'),
+(8, 'user6', '$2a$11$HipGnCk0EMftfx4iigg/wuwnabhKqL7zwyLDWFhxCWSJ8keQ8LQ3u', 2, 'ibam6'),
+(9, 'user7', '$2a$11$I7i0LAd0sxtohsTY2L6gC.ZAMAEo5sxlDo7vpB0nw59swMow4DnTq', 2, 'ibam7'),
+(10, 'user8', '$2a$11$jAgff0b8S22VNsINWLL..u0bKW1Xic7Emq57rKHGRDcCd/Xcquho6', 2, 'ibam8'),
+(11, 'user9', '$2a$11$6U//PUAdfyAIsbPboeKQwey0YpneIChSxav9dKmbtHwr.JWAe0MTm', 2, 'ibam9'),
+(12, 'user10', '$2a$11$Mn8.moZDwRzEtIFxqJR89OG899VEXLFfMCG4EN4HQUdSynjBiv8S6', 2, 'ibam10'),
+(13, 'user11', '$2a$11$29Kowz.rLBDgl/mKykG5LefId66TS307ctPc5f0vT9PVppv9BiDua', 2, 'ibam11'),
+(14, 'user12', '$2a$11$l6rR5yuxIGhLF57uemIZ9.iruaMPs7NuORVh40A5gz11gUD/fUEWm', 2, 'ibam12'),
 (15, 'guru1', '$2a$11$vPam.YSB4qplLTOfA.ZHNu8NFrJUZCD/mK8T/Iy.DNTA5OufZcwNW', 3, 'ibam13');
 
 --
@@ -341,7 +337,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `absensi`
 --
 ALTER TABLE `absensi`
-  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id_absensi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `absensi_kegiatan`

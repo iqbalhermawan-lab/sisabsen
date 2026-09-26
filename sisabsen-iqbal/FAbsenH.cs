@@ -32,6 +32,9 @@ namespace sisabsen_iqbal
 
         private void FAbsenH_Load(object sender, EventArgs e)
         {
+            dtpTanggal.Value = DateTime.Now;
+            dtpTanggal.Enabled = false;
+
             loadkelas();
         }
 
@@ -63,24 +66,25 @@ namespace sisabsen_iqbal
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (guna2DataGridView1.Rows.Count == 0 || cmbKelas.SelectedIndex == -1)
+            if (guna2DataGridView1.Rows.Count == 0 || cmbKelas.SelectedIndex == -1 || cmbJam.SelectedIndex == -1)
             {
-                MessageBox.Show("Pilih kelas dan pastikan data siswa tersedia!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Pilih kelas, jam pelajaran, dan pastikan data siswa tersedia!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
 
             string tgl = dtpTanggal.Value.ToString("yyyy-MM-dd");
             string idKelas = cmbKelas.SelectedValue.ToString();
+            string jamPelajaran = cmbJam.Text;
             string idGuru = UserSession.IdGuru.ToString();
 
-            // cek agar absen tidak double input
-            string queryCek = $"SELECT COUNT(*) FROM absensi WHERE tanggal = '{tgl}' AND id_kelas = '{idKelas}'";
+            // Cek Duplikasi
+            string queryCek = $"SELECT COUNT(*) FROM absensi WHERE tanggal = '{tgl}' AND id_kelas = '{idKelas}' AND jam_pelajaran = '{jamPelajaran}'";
             db.crud(queryCek);
 
             int jumlahAbsen = Convert.ToInt32(db.ds.Tables[0].Rows[0][0]);
             if (jumlahAbsen > 0)
             {
-                MessageBox.Show("Kelas ini sudah di-absen pada tanggal tersebut!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show($"Kelas ini sudah di-absen untuk {jamPelajaran}!", "Peringatan", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -91,14 +95,51 @@ namespace sisabsen_iqbal
                     string idSiswa = row.Cells[1].Value.ToString();
                     string ket = row.Cells[4].Value.ToString();
 
-                    db.crud($"INSERT INTO absensi (tanggal, id_kelas, id_siswa, keterangan, id_guru) VALUES ('{tgl}', '{idKelas}', '{idSiswa}', '{ket}', '{idGuru}')");
+                    string queryInsert = $"INSERT INTO absensi (tanggal, id_kelas, jam_pelajaran, id_siswa, keterangan, id_guru) " + $"VALUES ('{tgl}', '{idKelas}', '{jamPelajaran}', '{idSiswa}', '{ket}', '{idGuru}')";
+                    db.crud(queryInsert);
                 }
             }
 
-            MessageBox.Show("Data absensi berhasil disimpan secara masal!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Data absensi berhasil disimpan!", "Sukses", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             guna2DataGridView1.Rows.Clear();
             cmbKelas.SelectedIndex = -1;
+            cmbJam.SelectedIndex = -1;
+        }
+
+        private void dtpTanggal_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbJam_DropDown(object sender, EventArgs e)
+        {
+            cmbJam.Items.Clear();
+            cmbJam.Items.AddRange(new string[] { "Jam ke-01", "Jam ke-02", "Jam ke-03" });
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            guna2DataGridView1.CurrentCell = null;
+
+            string kataKunci = txtSearch.Text.ToLower();
+
+            foreach (DataGridViewRow row in guna2DataGridView1.Rows)
+            {
+                if (row.IsNewRow) continue;
+
+                string namaSiswa = row.Cells[3].Value != null ? row.Cells[3].Value.ToString().ToLower() : "";
+                string nisSiswa = row.Cells[2].Value != null ? row.Cells[2].Value.ToString().ToLower() : "";
+
+                if (namaSiswa.Contains(kataKunci) || nisSiswa.Contains(kataKunci))
+                {
+                    row.Visible = true;
+                }
+                else
+                {
+                    row.Visible = false;
+                }
+            }
         }
     }
 }
