@@ -29,6 +29,7 @@ namespace sisabsen_iqbal
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FDashboard));
             this.pnlSide = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -57,11 +58,15 @@ namespace sisabsen_iqbal
             this.guna2Shapes8 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2Shapes7 = new Guna.UI2.WinForms.Guna2Shapes();
             this.guna2Shapes2 = new Guna.UI2.WinForms.Guna2Shapes();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.timerWaktu = new System.Windows.Forms.Timer(this.components);
+            this.lblWaktu = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.pnlSide.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
             this.pnlDP.SuspendLayout();
             this.pnlContent.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlSide
@@ -385,6 +390,7 @@ namespace sisabsen_iqbal
             // 
             // pnlContent
             // 
+            this.pnlContent.Controls.Add(this.guna2Panel1);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel3);
             this.pnlContent.Controls.Add(this.guna2HtmlLabel2);
             this.pnlContent.Controls.Add(this.guna2Shapes6);
@@ -397,7 +403,7 @@ namespace sisabsen_iqbal
             this.pnlContent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContent.Location = new System.Drawing.Point(170, 0);
             this.pnlContent.Name = "pnlContent";
-            this.pnlContent.Size = new System.Drawing.Size(1094, 749);
+            this.pnlContent.Size = new System.Drawing.Size(1200, 749);
             this.pnlContent.TabIndex = 1;
             // 
             // guna2HtmlLabel3
@@ -405,7 +411,7 @@ namespace sisabsen_iqbal
             this.guna2HtmlLabel3.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel3.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel3.Location = new System.Drawing.Point(37, 57);
+            this.guna2HtmlLabel3.Location = new System.Drawing.Point(37, 89);
             this.guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             this.guna2HtmlLabel3.Size = new System.Drawing.Size(271, 18);
             this.guna2HtmlLabel3.TabIndex = 11;
@@ -416,7 +422,7 @@ namespace sisabsen_iqbal
             this.guna2HtmlLabel2.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel2.ForeColor = System.Drawing.Color.Black;
-            this.guna2HtmlLabel2.Location = new System.Drawing.Point(37, 24);
+            this.guna2HtmlLabel2.Location = new System.Drawing.Point(37, 56);
             this.guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             this.guna2HtmlLabel2.Size = new System.Drawing.Size(117, 27);
             this.guna2HtmlLabel2.TabIndex = 4;
@@ -426,7 +432,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes6.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes6.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes6.Location = new System.Drawing.Point(868, 104);
+            this.guna2Shapes6.Location = new System.Drawing.Point(867, 136);
             this.guna2Shapes6.Name = "guna2Shapes6";
             this.guna2Shapes6.PolygonSkip = 1;
             this.guna2Shapes6.Rotate = 0F;
@@ -441,7 +447,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes5.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes5.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes5.Location = new System.Drawing.Point(662, 104);
+            this.guna2Shapes5.Location = new System.Drawing.Point(662, 136);
             this.guna2Shapes5.Name = "guna2Shapes5";
             this.guna2Shapes5.PolygonSkip = 1;
             this.guna2Shapes5.Rotate = 0F;
@@ -456,7 +462,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes4.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes4.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes4.Location = new System.Drawing.Point(460, 104);
+            this.guna2Shapes4.Location = new System.Drawing.Point(460, 136);
             this.guna2Shapes4.Name = "guna2Shapes4";
             this.guna2Shapes4.PolygonSkip = 1;
             this.guna2Shapes4.Rotate = 0F;
@@ -471,7 +477,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes3.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes3.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes3.Location = new System.Drawing.Point(37, 104);
+            this.guna2Shapes3.Location = new System.Drawing.Point(37, 136);
             this.guna2Shapes3.Name = "guna2Shapes3";
             this.guna2Shapes3.PolygonSkip = 1;
             this.guna2Shapes3.Rotate = 0F;
@@ -486,13 +492,13 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes8.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes8.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes8.Location = new System.Drawing.Point(37, 447);
+            this.guna2Shapes8.Location = new System.Drawing.Point(37, 479);
             this.guna2Shapes8.Name = "guna2Shapes8";
             this.guna2Shapes8.PolygonSkip = 1;
             this.guna2Shapes8.Rotate = 0F;
             this.guna2Shapes8.RoundedRadius = 10;
             this.guna2Shapes8.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
-            this.guna2Shapes8.Size = new System.Drawing.Size(998, 227);
+            this.guna2Shapes8.Size = new System.Drawing.Size(998, 217);
             this.guna2Shapes8.TabIndex = 6;
             this.guna2Shapes8.Text = "guna2Shapes8";
             this.guna2Shapes8.Zoom = 100;
@@ -501,7 +507,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes7.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes7.FillColor = System.Drawing.Color.White;
-            this.guna2Shapes7.Location = new System.Drawing.Point(37, 296);
+            this.guna2Shapes7.Location = new System.Drawing.Point(37, 328);
             this.guna2Shapes7.Name = "guna2Shapes7";
             this.guna2Shapes7.PolygonSkip = 1;
             this.guna2Shapes7.Rotate = 0F;
@@ -516,7 +522,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(118)))), ((int)(((byte)(110)))));
             this.guna2Shapes2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(118)))), ((int)(((byte)(110)))));
-            this.guna2Shapes2.Location = new System.Drawing.Point(248, 104);
+            this.guna2Shapes2.Location = new System.Drawing.Point(248, 136);
             this.guna2Shapes2.Name = "guna2Shapes2";
             this.guna2Shapes2.PolygonSkip = 1;
             this.guna2Shapes2.Rotate = 0F;
@@ -527,11 +533,37 @@ namespace sisabsen_iqbal
             this.guna2Shapes2.Text = "guna2Shapes2";
             this.guna2Shapes2.Zoom = 100;
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(242)))), ((int)(((byte)(245)))));
+            this.guna2Panel1.Controls.Add(this.lblWaktu);
+            this.guna2Panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 0);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.Size = new System.Drawing.Size(1200, 50);
+            this.guna2Panel1.TabIndex = 12;
+            // 
+            // timerWaktu
+            // 
+            this.timerWaktu.Interval = 1000;
+            this.timerWaktu.Tick += new System.EventHandler(this.timerWaktu_Tick);
+            // 
+            // lblWaktu
+            // 
+            this.lblWaktu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblWaktu.BackColor = System.Drawing.Color.Transparent;
+            this.lblWaktu.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWaktu.Location = new System.Drawing.Point(1075, 17);
+            this.lblWaktu.Name = "lblWaktu";
+            this.lblWaktu.Size = new System.Drawing.Size(104, 19);
+            this.lblWaktu.TabIndex = 0;
+            this.lblWaktu.Text = "guna2HtmlLabel5";
+            // 
             // FDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1264, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.pnlContent);
             this.Controls.Add(this.pnlSide);
             this.Name = "FDashboard";
@@ -546,6 +578,8 @@ namespace sisabsen_iqbal
             this.pnlDP.ResumeLayout(false);
             this.pnlContent.ResumeLayout(false);
             this.pnlContent.PerformLayout();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -579,5 +613,8 @@ namespace sisabsen_iqbal
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2Button FAbsenK;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Timer timerWaktu;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblWaktu;
     }
 }

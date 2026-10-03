@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace sisabsen_iqbal
 {
     public partial class FDashboard : Form
     {
+        private bool isLogout = false;
+
         public FDashboard()
         {
             InitializeComponent();
@@ -121,6 +124,7 @@ namespace sisabsen_iqbal
         private void FDashboard_Load(object sender, EventArgs e)
         {
             AturHakAkses();
+            timerWaktu.Start();
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
@@ -129,6 +133,7 @@ namespace sisabsen_iqbal
 
             if (konfirmasi == DialogResult.Yes)
             {
+                isLogout = true;
                 UserSession.Logout();
 
                 FLogin formLogin = new FLogin();
@@ -149,7 +154,16 @@ namespace sisabsen_iqbal
 
         private void FDashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Application.Exit();
+            if (!isLogout)
+            {
+                Application.Exit();
+            }
+        }
+
+        private void timerWaktu_Tick(object sender, EventArgs e)
+        {
+            CultureInfo budayaIndonesia = new CultureInfo("id-ID");
+            lblWaktu.Text = DateTime.Now.ToString("dddd, dd MMM yyyy", budayaIndonesia);
         }
     }
 }

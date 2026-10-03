@@ -128,6 +128,7 @@ namespace sisabsen_iqbal
             // 
             this.guna2Shapes7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.guna2Shapes7.BackColor = System.Drawing.Color.White;
             this.guna2Shapes7.BorderColor = System.Drawing.Color.White;
             this.guna2Shapes7.FillColor = System.Drawing.Color.White;
             this.guna2Shapes7.Location = new System.Drawing.Point(12, 72);
@@ -172,7 +173,7 @@ namespace sisabsen_iqbal
             // 
             // cmbKls
             // 
-            this.cmbKls.BackColor = System.Drawing.Color.Transparent;
+            this.cmbKls.BackColor = System.Drawing.Color.White;
             this.cmbKls.BorderRadius = 5;
             this.cmbKls.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbKls.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -200,6 +201,7 @@ namespace sisabsen_iqbal
             // 
             // txtNama
             // 
+            this.txtNama.BackColor = System.Drawing.Color.White;
             this.txtNama.BorderRadius = 5;
             this.txtNama.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNama.DefaultText = "";
@@ -242,6 +244,7 @@ namespace sisabsen_iqbal
             // 
             // txtNis
             // 
+            this.txtNis.BackColor = System.Drawing.Color.White;
             this.txtNis.BorderRadius = 5;
             this.txtNis.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.txtNis.DefaultText = "";
@@ -442,7 +445,7 @@ namespace sisabsen_iqbal
             // 
             // cmbJK
             // 
-            this.cmbJK.BackColor = System.Drawing.Color.Transparent;
+            this.cmbJK.BackColor = System.Drawing.Color.White;
             this.cmbJK.BorderRadius = 5;
             this.cmbJK.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cmbJK.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;

@@ -74,7 +74,7 @@ namespace sisabsen_iqbal
             this.txtPass.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtPass.Location = new System.Drawing.Point(284, 275);
             this.txtPass.Name = "txtPass";
-            this.txtPass.PasswordChar = '*';
+            this.txtPass.PasswordChar = '•';
             this.txtPass.PlaceholderForeColor = System.Drawing.Color.Silver;
             this.txtPass.PlaceholderText = "Masukkan Password";
             this.txtPass.SelectedText = "";
@@ -227,6 +227,7 @@ namespace sisabsen_iqbal
             this.Name = "FLogin";
             this.Text = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FLogin_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
